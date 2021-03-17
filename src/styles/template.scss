@@ -1,0 +1,47 @@
+@mixin textstyle {
+    color: #000000;
+    font-family: 'Roboto', sans-serif;
+}
+
+#root .style-template:last-child{
+    border-bottom: none;
+}
+
+.style-template{
+    @include textstyle();
+    border-bottom: .5px solid #D0D3D4;
+    margin: 15px;
+    
+    h5{
+    font-size: 18px;
+    margin:25px 0px 5px 0px;
+    }  
+
+   
+}
+
+.template-description{
+    display: flex;
+    justify-content: space-between;
+}
+
+.template-price{
+    display: flex;
+    margin-right: 20px;
+    
+}
+
+@media screen and (max-width:573px) {
+    .style-p1 {width: 350px;}  
+    
+}
+
+@media screen and (max-width:510px) {
+    .style-p1 {width: 190px;}  
+    
+}
+
+@media screen and (max-width:363px) {
+    .style-p1 {width: 150px;}  
+    
+}

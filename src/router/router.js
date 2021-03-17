@@ -1,20 +1,21 @@
 import {options} from '../controllers/index'
-
+let content = document.getElementById('root');
 
 const router = (route) =>{
+        content.innerHTML = '';
     switch (route){
         case '#Premium':
-            return options.premium();
+            return content.appendChild(options.premium());
         case '#Especiales':
-            return options.especiales();
+            return content.appendChild(options.especiales());
         case '#Clasicas':
-                return options.clasicas(); 
+                return content.appendChild(options.clasicas()); 
         case '#Hot_Dogs':
-                return options.hotdogs();
+                return content.appendChild(options.hotdogs());
         case '#Snacks':
-                return options.snacks();
+                return content.appendChild(options.snacks());
         case '#Paquetes':
-                return options.paquetes();
+                return content.appendChild(options.paquetes());
         default:
             return console.log('404 not found')                                  
     }

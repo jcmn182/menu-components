@@ -1,5 +1,4 @@
-import './main.css';
-import './views/styles/menu.style.css'
+import './main.scss';
 
 import {router} from './router/router.js'
 
