@@ -8,16 +8,7 @@ const hotdogs =  data.slice(17,21);
 const snacks =  data.slice(21,31);
 const paquetes =  data.slice(31);
 
-const options = {
-    premium : getData(premium),
-    especiales: getData(especiales),
-    clasicas: getData(clasicas),
-    hotdogs: getData(hotdogs),
-    snacks: getData(snacks),
-    paquetes: getData(paquetes)
-}
-
-const getData = (data) =>{
+function getData(data) {
     
     const viewElement = document.createElement('div');
     viewElement.innerHTML = view
@@ -31,6 +22,16 @@ const getData = (data) =>{
         const clone = templateItem.cloneNode(true);
         fragment.appendChild(clone)
   })
+  return fragment
+}
+
+const options = {
+    premium : getData(premium),
+    especiales: getData(especiales),
+    clasicas: getData(clasicas),
+    hotdogs: getData(hotdogs),
+    snacks: getData(snacks),
+    paquetes: getData(paquetes)
 }
 
 export {options}
