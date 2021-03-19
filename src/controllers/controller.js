@@ -14,7 +14,7 @@ const fragment = document.createDocumentFragment();
       const clone = templateItem.cloneNode(true);
       fragment.appendChild(clone)
 })
-   return  console.log(data)
+   return  fragment
 }
 
 export {getData}
