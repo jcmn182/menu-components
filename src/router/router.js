@@ -1,4 +1,4 @@
-import {options} from '../controllers/controller'
+import {options} from '../controllers/data.index'
 let content = document.getElementById('root');
 
 const router = (route) =>{
