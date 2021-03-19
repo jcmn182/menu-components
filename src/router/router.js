@@ -1,5 +1,5 @@
 import {data} from '../db/dataItems';
-import {getData} from '../controllers/controller';
+import {getData, getDataTwo} from '../controllers/controller';
 
 let content = document.getElementById('root');
 const premium = data.slice(0,4);
@@ -19,7 +19,7 @@ const router = (route) =>{
         case '#Clasicas':
                 return content.appendChild(getData(clasicas)); 
         case '#Hot_Dogs':
-                return content.appendChild(getData(hotdogs));
+                return content.appendChild(getDataTwo(hotdogs));
         case '#Snacks':
                 return content.appendChild(getData(snacks));
         case '#Paquetes':
