@@ -1,12 +1,11 @@
 import view from '../views/template.html';
 
+const getData = (data) =>{
+
 const viewElement = document.createElement('div');
 viewElement.innerHTML = view
 const templateItem = viewElement.querySelector('#items-template').content
 const fragment = document.createDocumentFragment();
-
-
-export default   (data) =>{
    
    data.forEach(data =>{
       templateItem.querySelector('h5').textContent = data.name;
@@ -15,5 +14,7 @@ export default   (data) =>{
       const clone = templateItem.cloneNode(true);
       fragment.appendChild(clone)
 })
-   return fragment
+   return  console.log(data)
 }
+
+export {getData}
